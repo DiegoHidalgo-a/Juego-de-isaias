@@ -736,9 +736,6 @@ info.player1.setLife(3)
 info.player2.setLife(3)
 info.player3.setLife(3)
 info.player4.setLife(3)
-game.onUpdate(function () {
-    scene.centerCameraAt((0 + 0) / 2, (0 + 0) / 2)
-})
 forever(function () {
     music.play(music.stringPlayable("A F E F D G E F ", 40), music.PlaybackMode.InBackground)
 })
