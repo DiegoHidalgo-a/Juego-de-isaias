@@ -1,6 +1,12 @@
 namespace SpriteKind {
     export const Diamond = SpriteKind.create()
 }
+/**
+ * i
+ */
+/**
+ * D
+ */
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile0`, function (sprite, location) {
     info.player1.changeLifeBy(-1)
     info.player2.changeLifeBy(-1)
