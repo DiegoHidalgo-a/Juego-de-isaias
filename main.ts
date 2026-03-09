@@ -4,11 +4,9 @@ namespace SpriteKind {
 /**
  * Isi
  */
-/**
- * diegoi holaaa
- * 
- * como estas?
- */
+// diegoi holaaa
+// 
+// como estas?
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile0`, function (sprite, location) {
     info.player1.changeLifeBy(-1)
     info.player2.changeLifeBy(-1)
@@ -452,6 +450,9 @@ controller.player2.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Press
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
     mp.changePlayerStateBy(mp.playerSelector(mp.PlayerNumber.Four), MultiplayerState.life, -1)
 })
+mp.onLifeZero(function (player2) {
+    sprites.destroy(mp.getPlayerSprite(mp.playerSelector(mp.PlayerNumber.Three)), effects.fire, 500)
+})
 controller.player4.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function () {
     if (mp.getPlayerSprite(mp.playerSelector(mp.PlayerNumber.Four)).vx == 0) {
         mp.getPlayerSprite(mp.playerSelector(mp.PlayerNumber.Four)).x += -19
@@ -569,9 +570,6 @@ controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Press
     if (mp.getPlayerSprite(mp.playerSelector(mp.PlayerNumber.One)).vx == 0) {
         mp.getPlayerSprite(mp.playerSelector(mp.PlayerNumber.One)).y += -19
     }
-})
-mp.onLifeZero(function (player2) {
-    sprites.destroy(mp.getPlayerSprite(mp.playerSelector(mp.PlayerNumber.Three)), effects.fire, 500)
 })
 controller.player3.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function () {
     if (mp.getPlayerSprite(mp.playerSelector(mp.PlayerNumber.Three)).vx == 0) {
