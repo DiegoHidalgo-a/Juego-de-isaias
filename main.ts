@@ -5,7 +5,9 @@ namespace SpriteKind {
  * Isi
  */
 /**
- * diegoi
+ * diegoi holaaa
+ * 
+ * como estas?
  */
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile0`, function (sprite, location) {
     info.player1.changeLifeBy(-1)
