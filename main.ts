@@ -734,7 +734,6 @@ let Players: mp.Player = null
 let Proyectile4: Sprite = null
 let Proyectile2: Sprite = null
 let Proyectile3: Sprite = null
-music.play(music.stringPlayable("- - - - - - - - ", 120), music.PlaybackMode.UntilDone)
 turtle.showTurtle()
 game.splash("A para saltar, B para atacar")
 scene.setBackgroundColor(11)
