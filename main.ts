@@ -1,6 +1,9 @@
 namespace SpriteKind {
     export const Diamond = SpriteKind.create()
 }
+/**
+ * Isi
+ */
 // diegoi holaaa
 // 
 // como estas?
